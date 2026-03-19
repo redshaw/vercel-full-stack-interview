@@ -20,6 +20,13 @@ Open:
 npm run build
 ```
 
+## Tailwind
+
+Tailwind is configured and ready to use:
+
+- Global import in `src/app/globals.css`
+- PostCSS plugin in `postcss.config.mjs`
+
 ## Interview-Day Checklist
 
 - Start `npm run dev` before the call.
