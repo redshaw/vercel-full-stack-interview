@@ -1,10 +1,28 @@
-90min Fullstack Coding Challenge: A Vercel engineer will introduce a set of functionality for you to implement as a web application. You will implement this on your own machine using whatever tools and languages you like.
+# Vercel Interview Prep App
 
-The problem space will not require anything beyond a standard web framework. You will not need to stand up databases or any other external infrastructure.
-You should come prepared with a functional web app that has a `/ping` route that responds with a webpage with “Pong” on it
+Minimal Next.js + TypeScript app prepared for the coding interview.
 
-You should share your screen while you work so that we’re on the same page regarding how and where you employ AI coding assistance.
+## Local Run
 
-Throughout the interview, the interviewer will be available for any questions you may have, support you through any roadblocks you run into, and will regularly check in on progress.
+```bash
+npm install
+npm run dev
+```
 
-After the interview, we ask that you upload your project to share with the coordinator/recruiter you have been working with. This can be uploaded as a GitHub repository or a ZIP file on a storage provider like Google Drive or Dropbox.
+Open:
+
+- `http://localhost:3000`
+- `http://localhost:3000/ping` (must render `Pong`)
+
+## Quick Verification
+
+```bash
+npm run build
+```
+
+## Interview-Day Checklist
+
+- Start `npm run dev` before the call.
+- Keep browser open on `/ping` as a fast readiness check.
+- Build features incrementally and verify in browser frequently.
+- After the interview, share this project as a GitHub repo or zip file.
