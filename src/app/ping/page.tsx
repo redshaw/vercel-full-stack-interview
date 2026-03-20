@@ -10,19 +10,18 @@ export default function PingPage() {
   //   console.log("DATA: ", data);
   // }
 
-  const handleSumbit = async(e: React.FormEvent<HTMLFormElement>) =>{
+  const sendQuery = async(query: string) =>{
       console.log("SUBMITTING");
-      e.preventDefault();
       // fetch from autocomplete endpoint
       const response = await fetch('/api/autocomplete', {
         method: 'POST',
-        body: JSON.stringify({ query: (e.target as HTMLFormElement).query.value.toLowerCase() }),
+        body: JSON.stringify({ query: query.toLowerCase() }),
     });
     const data = await response.json();
     setWords(data.words);
     console.log("DATA: ", words);
   }
-
+  
   const [words, setWords] = useState<string[]>([]);
   
   useEffect(() => {
@@ -33,8 +32,8 @@ export default function PingPage() {
   return (
     <main>
       <div>
-        <form onSubmit={(e) => handleSumbit(e)}>
-          <input type="text" name="query" placeholder="Enter a word" />
+        <form>
+          <input onChange={(e) => sendQuery(e.target.value.toLowerCase())} type="text" name="query" placeholder="Enter a word" />
           {words.length > 0 && (
             <ul className="flex flex-col border-2 border-gray-300 rounded-md p-4">
               {words.map((word) => (
@@ -48,3 +47,6 @@ export default function PingPage() {
     </main>
   );
 }
+
+
+

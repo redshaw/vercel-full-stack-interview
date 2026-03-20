@@ -33,3 +33,6 @@ Tailwind is configured and ready to use:
 - Keep browser open on `/ping` as a fast readiness check.
 - Build features incrementally and verify in browser frequently.
 - After the interview, share this project as a GitHub repo or zip file.
+
+
+mailto:tobi@vercel.com
