@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     const matches = words.filter((word) => word.toLowerCase().startsWith(query));
 
 
-    return Response.json({ query, words: [matches] });
+    return Response.json({ query, words: matches });
 
   // build the trie
   // const trie: TrieNode = {};
