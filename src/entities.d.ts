@@ -1,3 +1,4 @@
-interface TrieNode {
-    [key: string]: TrieNode;
+
+export interface TrieNode {
+    [key: string]: TrieNode[];
 }
